@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title><%= Title %></title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Dr Online</h1>
+        <nav>
+            <ul>
+            <% if (user) { %> <!-- Si el usuario está autenticado, mostrar las opciones para crear blog, ver productos y cerrar sesión -->
+                <li><a href="/">main</a></li>
+                <li><a href="/blogs/crear">Crear Blog</a></li>
+                <li><a href="/productos">Ver Productos</a></li>
+                <li><a href="/logout">Cerrar Sesión</a></li>
+                <li><a href="/usuarios">Ver Usuarios</a></li> 
+            <% } else { %> <!-- Si el usuario no está autenticado, mostrar opciones para iniciar sesión y registrarse -->
+                <li><a href="/">main</a></li>
+                <li><a href="/login">Iniciar Sesión</a></li>
+                <li><a href="/sign-up">Registrarse</a></li>
+            <% } %>
+            </ul>
+        </nav>
+        </header>
+        <br><br><br>
+    <main>
+        <h1>Iniciar sesión</h1>
+        <form action="/login" method="POST" class="sign-login">
+            <br>
+            <label for="username">Usuario</label>
+            <br>
+            <input type="text" name="username" required>
+            <br>
+            <label for="password">Contraseña</label>
+            <br>
+            <input type="password" name="password" required>
+            <br>
+            <div>
+            <button type="submit">Entrar</button>
+            </div>
+        </form>
+        <br>
+        <p><%= message %></p>
+        <br>
+        <a href="/sign-up">¿No tienes cuenta? Regístrate aquí</a>
+    </main>
+    <br><br><br><br><br>
+  <footer>
+    <p>@2025 por Juan Ernesto Pacheco Arrieta</p>
+</footer>
+</body>
+</html>

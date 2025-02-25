@@ -1,0 +1,248 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*HEADER*/
+header{
+    background-color: black;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header h1{
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header ul{
+    display: flex;
+    gap: 10px;
+    list-style-type: none;
+}
+header a{
+    color: white;
+    text-decoration: none;
+    background-color: darkblue;
+    padding: 5px;
+    border-radius: 8px;
+    border: thin solid blue;
+    box-shadow: 0px 0px 10px blue;
+    font-weight: 600;
+    transition: 
+    padding 0.3s ease,
+    box-shadow 0.3s ease,
+    border 0.3s ease;
+}
+header a:hover{
+    padding-left: 15px;
+    padding-right: 15px;
+    border: thin solid white;
+    box-shadow: 0px 0px 10px white;
+}
+/*main*/
+
+main{
+    padding: 40px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+main h1{
+    font-size: 40px;
+}
+/*Main-Blog*/
+.main-blog{
+    display: grid; 
+    padding: 30px;
+    grid-template-columns: 20% 20% 20% 20%;
+    gap: 15px;
+    justify-content: space-between;
+    background-color: rgb(191, 191, 191);
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.503);
+    max-width: 100%;
+    max-height: 400px;
+    height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.blog{
+    width: 250px;
+    height: 200px;
+    background-color: darkblue;
+    color: white;
+    border-radius: 8px;
+    border: thin solid blue;
+    box-shadow: 0px 0px 10px blue;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.blog a{
+    color: rgba(0, 0, 0, 0.493);
+    font-weight: 600;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px white;
+    padding: 5px;
+    background-color: rgb(255, 255, 255);
+    text-decoration: none;
+    color: black;
+    transition: 
+    box-shadow 0.3s ease,
+    border 0.3s ease,
+    padding 0.3s ease;
+}
+.blog a:hover{
+    box-shadow: 0px 0px 10px blue;
+    border: thin solid blue;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.main-botones{
+    display: flex;
+    gap: 15px;
+    color: white;
+}
+.main-botones a{
+    color: white;
+    font-weight: 600;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px white;
+    padding: 5px;
+    background-color: black;
+    text-decoration: none;
+}
+.main-blog button{
+    font-size: 15px;
+    color: white;
+    font-weight: 600;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px white;
+    padding: 5px;
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+/*Crear*/
+.crear{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.crear label{
+    font-size: 18px;
+}
+.crear input{
+    padding: 8px;
+}
+.crear textarea{
+    padding: 10px;
+    resize: none;
+}
+.crear button{
+    background-color: darkblue;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+    border: thin solid rgb(0, 0, 0);
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    transition: 
+    padding 0.3s ease,
+    border 0.3s ease,
+    box-shadow 0.3s ease;
+    cursor: pointer;
+}
+.crear button:hover{
+    padding-left: 20px;
+    padding-right: 20px;
+    border: thin solid blue;
+    box-shadow: 0px 0px 10px blue;
+}
+/*detalles*/
+.detalles{
+    text-align: center;
+}
+.detalles a{
+    font-weight: 600;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    background-color: darkblue;
+    border: thin solid blue;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px blue;
+    transition:
+    color 0.3s ease,
+    padding 0.3s ease,
+    border 0.3s ease,
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.detalles a:hover{
+    color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: thin solid white;
+    background-color: white;
+    box-shadow: 0px 0px 10px black;
+}
+/*iniciar sesion*/
+.sign-login{
+    display: flex;
+    flex-direction: column;
+}
+.sign-login input{
+    padding: 5px;
+}
+.sign-login button{
+    font-weight: 600;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    background-color: darkblue;
+    border: thin solid blue;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px blue;
+    transition:
+    color 0.3s ease,
+    padding 0.3s ease,
+    border 0.3s ease,
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+    cursor: pointer;
+}
+.sign-login button:hover{
+    color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: thin solid white;
+    background-color: white;
+    box-shadow: 0px 0px 10px black;
+}
+/*producto*/
+.productos{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    gap: 5px;
+}
+.product{
+    border-radius: 8px;
+    border: thin solid blue;
+    box-shadow: 0px 0px 10px blue;
+    padding: 15px;
+    color: white;
+    background-color: darkblue;
+}
+/*FOOTER*/
+footer{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 25px;
+}
