@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title><%= Title %></title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Dr Online</h1>
+        <nav>
+            <ul>
+            <% if (user) { %> <!-- Si el usuario está autenticado, mostrar las opciones para crear blog, ver productos y cerrar sesión -->
+                <li><a href="/">main</a></li>
+                <li><a href="/blogs/crear">Crear Blog</a></li>
+                <li><a href="/productos">Ver Productos</a></li>
+                <li><a href="/logout">Cerrar Sesión</a></li>
+                <li><a href="/usuarios">Ver Usuarios</a></li> 
+            <% } else { %> <!-- Si el usuario no está autenticado, mostrar opciones para iniciar sesión y registrarse -->
+                <li><a href="/">main</a></li>
+                <li><a href="/login">Iniciar Sesión</a></li>
+                <li><a href="/sign-up">Registrarse</a></li>
+            <% } %>
+            </ul>
+        </nav>
+        </header>
+        <main>
+        <br><br><br>
+        <h1>Crear un nuevo blog</h1>
+        <form action="/blogs/crear" method="POST" enctype="multipart/form-data" class="crear">
+            <label for="title">Título</label>
+            <input type="text" name="title" required>
+            <br>
+            <label for="snippet">Resumen</label>
+            <input type="text" name="snippet" required>
+            <br>
+            <label for="body">Cuerpo del blog</label>
+            <textarea name="body" required></textarea>
+            <br>
+            <label for="image">Imagen</label>
+            <br>
+            <input type="file" name="image" required>
+            <br>
+            <div>
+            <button type="submit">Crear blog</button>
+            </div>
+        </form>
+        <br><br><br><br>
+    </main>
+  <footer>
+    <p>@2025 por Juan Ernesto Pacheco Arrieta</p>
+</footer>
+</body>
+</html>

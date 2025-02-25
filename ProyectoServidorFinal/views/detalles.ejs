@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title><%= Title %></title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Dr Online</h1>
+        <nav>
+            <ul>
+            <% if (user) { %> <!-- Si el usuario está autenticado, mostrar las opciones para crear blog, ver productos y cerrar sesión -->
+                <li><a href="/">main</a></li>
+                <li><a href="/blogs/crear">Crear Blog</a></li>
+                <li><a href="/productos">Ver Productos</a></li>
+                <li><a href="/logout">Cerrar Sesión</a></li>
+                <li><a href="/usuarios">Ver Usuarios</a></li> 
+            <% } else { %> <!-- Si el usuario no está autenticado, mostrar opciones para iniciar sesión y registrarse -->
+                <li><a href="/">main</a></li>
+                <li><a href="/login">Iniciar Sesión</a></li>
+                <li><a href="/sign-up">Registrarse</a></li>
+            <% } %>
+            </ul>
+        </nav>
+        </header>
+        <br><br>
+        <main>
+        <section class="detalles">
+        <h1><%= blog.title %></h1>
+        <br>
+        <p><%= blog.snippet %></p>
+        <br>
+        <p><%= blog.body %></p>
+        <br>
+        <% if(blog.imagePath) { %>
+            <img src="<%= blog.imagePath %>" alt="Imagen del blog" width="200px">
+        <% } %>
+        <br><br>
+        <a href="/">Volver al inicio</a>
+        </section>
+    </main>
+    <br><br><br><br>
+    <footer>
+        <p>@2025 por Juan Ernesto Pacheco Arrieta</p>
+    </footer>
+</body>
+</html>
